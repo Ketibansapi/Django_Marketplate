@@ -1,8 +1,9 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect     
 from django.contrib import messages
 #from django.core.mail import send_mail
 from .models import Contact
 
+# Contact request for user to input the data
 def contact(request):
   if request.method == 'POST':
     listing_id = request.POST['listing_id']
@@ -14,17 +15,19 @@ def contact(request):
     user_id = request.POST['user_id']
     realtor_email = request.POST['realtor_email']
 
-    #  Check if user has made inquiry already
+    #  Checker, if user has already made inquiry or not
     if request.user.is_authenticated:
       user_id = request.user.id
       has_contacted = Contact.objects.all().filter(listing_id=listing_id, user_id=user_id)
       if has_contacted:
-        messages.error(request, 'You have already made an inquiry for this listing')
+        messages.error(request, 'Ops! You have already made inquiry for this property')
         return redirect('/listings/'+listing_id)
 
+    # Var matching
     contact = Contact(listing=listing, listing_id=listing_id, name=name, email=email, phone=phone, message=message, user_id=user_id )
 
     contact.save()
 
-    messages.success(request, 'Your request has been submitted, a realtor will get back to you soon')
+    # Messages success
+    messages.success(request, 'Your inquiry has been submitted, a realtor may contact you as soon as possible')
     return redirect('/listings/'+listing_id)

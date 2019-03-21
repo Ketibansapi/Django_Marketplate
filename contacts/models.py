@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime
 
+# Model for contact form
 class Contact(models.Model):
   listing = models.CharField(max_length=200)
   listing_id = models.IntegerField()

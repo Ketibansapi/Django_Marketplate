@@ -5,6 +5,7 @@ from listings.choices import price_choices, bedroom_choices, state_choices
 from listings.models import Listing
 from realtors.models import Realtor
 
+# Home or index page data
 def index(request):
     listings = Listing.objects.order_by('-list_date').filter(is_published=True)[:3]
 
@@ -17,12 +18,12 @@ def index(request):
 
     return render(request, 'pages/index.html', context)
 
-
+# About page contain
 def about(request):
-    # Get all realtors
+    # Get all the realtors
     realtors = Realtor.objects.order_by('-hire_date')
 
-    # Get MVP
+    # Get MVP realtor
     mvp_realtors = Realtor.objects.all().filter(is_mvp=True)
 
     context = {
