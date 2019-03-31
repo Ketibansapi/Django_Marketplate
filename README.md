@@ -13,7 +13,8 @@ of the Django stack documentation.
 -  PostgreSQL
 
 ## Marketplate First Page
-![Screenshot (59)](https://user-images.githubusercontent.com/42229194/55286272-b0b6aa00-53c3-11e9-8816-fbe545bc00be.png)
+![Screenshot (60)](https://user-images.githubusercontent.com/42229194/55286297-19058b80-53c4-11e9-969f-63c22a95c06a.png)
+
 
 ## List of Properties
 ![Screenshot (61)](https://user-images.githubusercontent.com/42229194/55286291-01c69e00-53c4-11e9-9f8a-773630a2cc43.png)
