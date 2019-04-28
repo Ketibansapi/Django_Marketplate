@@ -143,8 +143,8 @@ MESSAGE_TAGS = {
 }
 
 # Email
-#EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_PORT = 
-#EMAIL_HOST_USER=''
-#EMAIL_HOST_PASSWORD=''
-#EMAIL_USE_TLS=True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER='chickenflakes9@gmail.com'
+EMAIL_HOST_PASSWORD='Batamania12!'
+EMAIL_USE_TLS=True
