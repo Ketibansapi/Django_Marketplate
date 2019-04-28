@@ -37,6 +37,6 @@ def contact(request):
       fail_silently=False
     )
 
-    # Messages success
+    # Messages Success
     messages.success(request, 'Your inquiry has been submitted, a realtor may contact you as soon as possible')
     return redirect('/listings/'+listing_id)
