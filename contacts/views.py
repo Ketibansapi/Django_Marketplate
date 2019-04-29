@@ -28,7 +28,7 @@ def contact(request):
 
     contact.save()
 
-    # SEND MAIL
+    # Send mail using Google SMTP
     send_mail(
       'Property Listing Inquiry',
       'There has been an inquiry for' + listing + '. Go check with admin to see more information.', 
@@ -37,6 +37,6 @@ def contact(request):
       fail_silently=False
     )
 
-    # Messages Success
+    # Success Messages
     messages.success(request, 'Your inquiry has been submitted, a realtor may contact you as soon as possible')
     return redirect('/listings/'+listing_id)
