@@ -39,4 +39,4 @@ def contact(request):
 
     # Success Messages
     messages.success(request, 'Your inquiry has been submitted, a realtor may contact you as soon as possible')
-    return redirect('/listings/'+listing_id)
+    return redirect('/')
