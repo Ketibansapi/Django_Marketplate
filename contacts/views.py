@@ -23,7 +23,7 @@ def contact(request):
         messages.error(request, 'Ops! You have already made inquiry for this property')
         return redirect('/listings/'+listing_id)
 
-    # Var matching contact
+    # Var matching contacts
     contact = Contact(listing=listing, listing_id=listing_id, name=name, email=email, phone=phone, message=message, user_id=user_id )
 
     contact.save()
