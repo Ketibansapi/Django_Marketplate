@@ -28,7 +28,7 @@ def contact(request):
 
     contact.save()
 
-    # Send and receives mail using Google SMTP
+    # Send and receives mail using Google SMTPs
     send_mail(
       'Property Listing Inquiry Notification',
       'Good day! There has been an inquiry for [' + listing + '] Go check with admin to see more information and please contact the seeker to get negotiation. Thank you. Regards, Lovely Admin', 
