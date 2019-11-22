@@ -15,4 +15,4 @@ of the Django stack documentation.
 ## List of Properties
 ![Screenshot (61)](https://user-images.githubusercontent.com/42229194/55286291-01c69e00-53c4-11e9-9f8a-773630a2cc43.png)
 
-Project powered by Brad Traversy and Django🔥
+Project powered by Brad and Django🔥
